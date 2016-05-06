@@ -1,0 +1,125 @@
+@import url(https://fonts.googleapis.com/css?family=Abel);
+
+*{
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body{
+	margin: 0;
+	font-size: 15px;
+	background-color: #D6D0D0;
+}
+
+label {
+	display: none;
+}
+
+nav {
+	font-size: 1.6em;
+	margin:	400px auto;
+	background: url("../images/navbkgd.png");
+	background-size: cover;
+    background-repeat: no-repeat;
+}
+h1 {
+	font-family: 'Abel', sans-serif;
+}
+
+h2 {
+	font-family: 'Abel', sans-serif;
+	font-size: 5.5em;
+	text-align: center;
+}
+
+p {
+	font-family: 'Abel', sans-serif;
+	font-size: 1.7em;
+}
+
+.nav {
+	height: 90px;
+	margin:	0 auto;
+}
+
+.line {
+	width: 20px;
+	height: 3px;
+	background: #000;
+	margin: 2px 0;
+}
+ 
+.local {
+	display: inline-block;
+	padding: 7%;
+	text-align: center;
+} 
+
+.navlinks {
+	font-family: 'Abel', sans-serif;
+	padding: 2.7%;
+	text-align: center;	
+	list-style-type: none;
+	color: #333;
+	font-weight: bolder;
+	text-decoration: none;
+	text-transform: uppercase;
+}
+
+.logo {
+	margin: -200px auto;
+	width: 20%;
+}
+
+#toggle {
+	display: none;
+}
+
+#indexbanner {
+	background: url("../images/backgroundmonolake.jpg");
+	background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#slogan {
+	font-size: 7em;
+	margin: 0 auto;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+@media only screen and (max-width: 2325px) {
+	.navlinks {
+		padding: 2.5%;
+	}
+}
+
+@media only screen and (max-width: 750px) {
+	label {
+		display: block;
+		float:right;
+		padding: 15px;
+	}
+	nav{
+		display: none;
+		position:static;
+		clear:both;
+		/*float: none;*/
+		background: none;
+	}
+	header{
+		height:auto;
+		padding: 0;
+	}
+	.navlinks{
+		float:none;
+		display:block;
+	}
+	#toggle:checked + nav {	
+		display: block;
+	}
+	#nomobile {
+		display: none;
+	}
+}
