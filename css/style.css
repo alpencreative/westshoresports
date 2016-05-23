@@ -19,7 +19,7 @@ label {
 nav {
 	font-size: 1.6em;
 	margin:	400px auto;
-	background: url("../images/navbkgd.png");
+/*	background: url("../images/wsslogobkgd.png");*/
 	background-size: cover;
     background-repeat: no-repeat;
 }
@@ -41,6 +41,14 @@ p {
 .nav {
 	height: 90px;
 	margin:	0 auto;
+}
+
+.left {
+	float: left;
+}
+
+.right {
+	float: right;
 }
 
 .line {
@@ -65,28 +73,38 @@ p {
 	font-weight: bolder;
 	text-decoration: none;
 	text-transform: uppercase;
+	margin-top: 10.5%;
 }
 
-.logo {
-	margin: -200px auto;
-	width: 20%;
+#navbanner {
+	background: url("../images/wsslogobkgd.png");
+	background-repeat: no-repeat;
+	background-size: contain;
+	height: 666px;
+	margin-bottom: 100px;
 }
 
 #toggle {
 	display: none;
 }
 
-#indexbanner {
+/*#indexbanner {
 	background: url("../images/backgroundmonolake.jpg");
 	background-size: cover;
     background-repeat: no-repeat;
-}
+}*/
 
 #slogan {
 	font-size: 7em;
 	margin: 0 auto;
     text-align: center;
     text-transform: uppercase;
+}
+
+#home {
+	background: url(../images/backgroundmonolake.jpg);
+	background-size: contain;	
+	background-repeat: no-repeat;
 }
 
 #bikes {
@@ -99,7 +117,65 @@ p {
 	}
 }
 
-@media only screen and (max-width: 750px) {
+@media only screen and (max-width: 2000px) {
+	.navlinks {
+		font-size: .8em;
+	}
+}
+
+@media only screen and (max-width: 1800px) {
+	h2 {
+		font-size: 3.5em;
+	}
+	#slogan {
+		font-size: 5em;
+	}
+}
+
+@media only screen and (max-width: 1500px) {
+	h2 {
+		font-size: 1.5em;
+	}
+	.navlinks {
+		padding: 2.2%;
+	}
+	#slogan {
+		font-size: 3em;
+	}
+	#navbanner {
+		height: 390px;
+	}	
+}
+
+@media only screen and (max-width: 1400px) {
+	.navlinks {
+		font-size: .7em;
+	}
+}
+
+@media only screen and (max-width: 1300px) {
+	nav {
+		margin: 300px auto;
+	}
+	.navlinks {
+		font-size: .6em;
+		padding: 2%;
+	}
+}
+
+@media only screen and (max-width: 1200px) {
+	#navbanner {
+		height: 300px;
+	}	
+}
+
+@media only screen and (max-width: 900px) {
+	.navlinks {
+		padding: 1.5%;
+	}
+}	
+
+@media only screen and (max-width: 800px) {
 	label {
 		display: block;
 		float:right;
