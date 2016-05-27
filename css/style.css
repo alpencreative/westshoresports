@@ -80,6 +80,14 @@ section {
 	margin-top: 10.9%;
 }
 
+.italic {
+	text-decoration: italic;
+}
+
+.bold {
+	font-weight: 
+}
+
 #navbanner {
 	background: url("../images/wsslogobkgd.png");
 	background-repeat: no-repeat;
