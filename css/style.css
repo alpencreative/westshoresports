@@ -252,6 +252,11 @@ a:hover img:first-child + img {
 	display: none;
 }
 
+#locations {
+	width: 70%
+	margin: 0 auto;
+}
+
 /*#indexbanner {
 	background: url("../images/backgroundmonolake.jpg");
 	background-size: cover;
