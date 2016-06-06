@@ -8,29 +8,60 @@
 	padding: 0;
 }
 
-body{
+body {
 	margin: 0;
 	font-size: 15px;
 	background-color: #D6D0D0;
 }
 
 label {
-	/*display: none;*/
+	display: none;
 	font-family: 'Abel', sans-serif;
 	font-size: 1.7em;
 	vertical-align: middle;
 }
+form label {
+	display: inline;
+}
 
 nav {
 	font-size: 1.6em;
-	margin: 15.5% auto;
+	height: 410px;
+	/*margin: 15.5% auto;*/
 /*	background: url("../images/wsslogobkgd.png");*/
+	background: url("../images/WSSLogobkgd_3.png");
 	background-size: cover;
     background-repeat: no-repeat;
+    position: fixed;
+    width: 100%;
+
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+nav.smaller {
+	/*margin: 5% auto;*/
 }
 
 header {
+/*	background: url("../images/WSSLogobkgd_2.png");*/
+	/*background-repeat: no-repeat;
+	background-size: contain;
+	width: 100%;
+	position: fixed;*/
 
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+header.smaller {
+	background-position-y: -220px;
 }
 
 h1 {
@@ -91,7 +122,9 @@ p {
 }
 
 table {
-	width: 80%;
+	width: 50%;
+	margin: 0 auto;
+	margin-bottom: 100px;
 }
 
 a {
@@ -104,16 +137,13 @@ a {
 
 section {
 	text-align: center;
+	margin-top: 200px;
 	margin-bottom: 50px;
+	clear: both;
 }
 
 footer {
 
-}
-
-table {
-	margin: 0 auto;
-	margin-bottom: 100px;
 }
 
 input {
@@ -138,7 +168,16 @@ td {
 	vertical-align: middle;
 	font-family: 'Coming Soon', cursive;
 	padding: 10px;
-	font-size: 3em;
+	font-size: 1.2em;
+}
+
+.clearfix:after{
+	height: 0;
+	font-size: 0;
+	visibility: hidden;
+	display: block;
+	content: " ";
+	clear: both;
 }
 
 .nav {
@@ -164,7 +203,7 @@ td {
  
 .local {
 	display: inline-block;
-	padding: 7%;
+	padding: 5%;
 	text-align: center;
 } 
 
@@ -181,7 +220,7 @@ td {
 	font-weight: bolder;
 	text-decoration: none;
 	text-transform: uppercase;
-	margin-top: 10.9%;
+	margin-top: 10%;
 	font-size: 1em;
 }
 
@@ -205,20 +244,21 @@ td {
 	text-align: left;
 }
 
+.tablehead {
+	font-weight: 700;
+}
+
 .sociallinks {
 	width: 60px;
 	height: 60px;
 	position: relative;
 	display: inline-block;
 	margin: 10px;
+
 	-webkit-transition: all linear 200ms;
 	-moz-transition: all linear 200ms;
 	-o-transition: all linear 200ms;
 	transition: all linear 200ms;
-}
-
-.tablehead {
-	font-weight: 700;
 }
 
 .sociallinks img {
@@ -228,6 +268,7 @@ td {
 	opacity: 0;
 	position: absolute;
 	top: 0;
+
 	-webkit-transition: all linear 200ms;
 	-moz-transition: all linear 200ms;
 	-o-transition: all linear 200ms;
@@ -241,10 +282,7 @@ a:hover img:first-child + img {
 }
 
 #navbanner {
-	background: url("../images/wsslogobkgd.png");
-	background-repeat: no-repeat;
-	background-size: contain;
-	height: 666px;
+	height: 390px;
 	/*margin-bottom: 100px;*/
 }
 
@@ -264,20 +302,34 @@ a:hover img:first-child + img {
 }*/
 
 #slogan {
-	font-size: 7em;
+	font-size: 6em;
 	margin: 0 auto;
     text-align: center;
     text-transform: uppercase;
+    padding: 0 1.5em;
 }
 
 #home {
-	background: url(../images/backgroundmonolake.jpg);
+/*	background: url(../images/backgroundmonolake.jpg);
 	background-size: contain;	
 	background-repeat: no-repeat;
+*/
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+#home.smaller {
+	background-position-y: -180px; 
 }
 
 #bikes {
 	text-align: center;
+}
+#bikepic {
+	width: 100%;
 }
 
 #contact {
@@ -285,8 +337,62 @@ a:hover img:first-child + img {
 	margin-bottom: .6em;
 }
 
+.section_body {
+	/*background-color: #eee;*/
+	margin: 5%;
+}
+.body_sections {
+	background-color: #eee;
+	padding: 1%;
+	margin: 1%;
+}
+.small_column_left {
+	display: inline-block;
+	float: left;
+	text-align: left;
+	width: 33%;
+}
+.small_column_right {
+	display: inline-block;
+	float: right;
+	text-align: left;
+	width: 33%;
+}
+#suppic {
+	width: 100%;
+	height: 100%;
+}
+
+.big_column_right {
+	float: right;
+	width: 66%;
+}
+.big_column_left {
+	display: inline-block;
+	float: left;
+	width: 66%;
+}
+
+
 #shop_photo {
 	background-color: #FFF;
+	text-align: left;
+	width: 45%;
+	display: inline-block;
+}
+
+#shop_photo img {
+	width: 100%;
+}
+
+#shop_words {
+	display: inline-block;
+	width: 45%;
+	vertical-align: bottom;
+}
+
+#shop_words p {
+	width: 90%;
 }
 
 #shop_stuff {

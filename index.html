@@ -6,9 +6,31 @@
 	<link rel="stylesheet" type="text/css" href="css/reset.css">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<script src="js/classie.js"></script>
+	<script>
+	    function init() {
+	        window.addEventListener('scroll', function(e){
+	            var distanceY = window.pageYOffset || document.documentElement.scrollTop,
+	                shrinkOn = 100,
+	                header = document.querySelector("header");
+	                nav = document.querySelector("nav");
+	            if (distanceY > shrinkOn) {
+	                classie.add(header,"smaller")
+	                classie.add(nav,"smaller");
+	            } else {
+	                if (classie.has(header,"smaller")) {
+	                    classie.remove(header,"smaller");
+	                    classie.remove(nav,"smaller");
+	                }
+	            }
+	        });
+	    }
+	    window.onload = init();
+	</script>
 </head>
 <body id="home">
-	<header>
+	<header class="clearfix">
 		<label for="toggle">
 			<div class="line"></div>
 			<div class="line"></div>
@@ -16,11 +38,11 @@
 		</label>
 		<input type="checkbox" id="toggle">	
 		<!-- 	<div id="indexbanner"></div> -->
-			<div id="navbanner">
-			<nav>
-				<div class="nav">
+			<div id="navbanner" class="clearfix">
+			<nav class="clearfix">
+				<div class="nav clearfix">
 						<a class="navlinks left" href="rates.html">Rates</a>
-						<a class="navlinks left" id="nomobile" href="bicycles.html">Bicycles</a>					
+						<a class="navlinks left" id="nomobile" href="bicycles.html">Bicycles</a>		
 						<a class="navlinks left" id="nomobile" href="kayaks.html">Kayaks</a>
 						<a class="navlinks left" id="nomobile" href="paddleboards.html">Paddleboards</a>
 						<a class="navlinks right" href="contactus.html">Contact Us</a>
@@ -31,7 +53,7 @@
 			</nav>
 			</div>
 		</header>
-		<section>
+		<section class="clearfix">
 			<h1 id="slogan">Now 3 Locations on Lake Tahoe's West Shore!</h1>
 			<div id="locations">
 				<div class="local">
