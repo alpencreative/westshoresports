@@ -6,111 +6,144 @@
 	<link rel="stylesheet" type="text/css" href="css/reset.css">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script src="js/classie.js"></script>
+	<script>
+	    function init() {
+	        window.addEventListener('scroll', function(e){
+	            var distanceY = window.pageYOffset || document.documentElement.scrollTop,
+	                shrinkOn = 100,
+	                header = document.querySelector("header");
+	                nav = document.querySelector("nav");
+	            if (distanceY > shrinkOn) {
+	                classie.add(header,"smaller")
+	                classie.add(nav,"smaller");
+	            } else {
+	                if (classie.has(header,"smaller")) {
+	                    classie.remove(header,"smaller");
+	                    classie.remove(nav,"smaller");
+	                }
+	            }
+	        });
+	    }
+	    window.onload = init();
+	</script>
 </head>
 <body>
 	<header>
-		<label for="toggle">
+		<label class="mobile_toggle" for="toggle">
 			<div class="line"></div>
 			<div class="line"></div>
 			<div class="line"></div>
 		</label>
-		<input type="checkbox" id="toggle">	
-			<div id="navbanner">
-			<nav>
-				<div class="nav">
-						<a class="navlinks left" href="rates.html">Rates</a>
-						<a class="navlinks left" id="nomobile" href="bicycles.html">Bicycles</a>					
-						<a class="navlinks left" id="nomobile" href="kayaks.html">Kayaks</a>
-						<a class="navlinks left" id="nomobile" href="paddleboards.html">Paddleboards</a>
-						<a class="navlinks right" href="contactus.html">Contact Us</a>
-						<a class="navlinks right" href="winter.html">Winter</a>
-						<a class="navlinks right" href="lodging.html">Lodging</a>
-						<a class="navlinks right" href="shop.html">Shop</a>
-				</div>	
-			</nav>
-			</div>
+		<input type="checkbox" id="toggle">
+	    
+	    <div class="container clearfix">
+	        <a href="index.html" id="centerlogo"><img src="images/wsslogo_small.png"></a>
+	        <nav class="clearfix">
+	        	<a class="navlinks left" href="index.html" id="nodesktop">Home</a>
+	            <a class="navlinks left" href="rates.html">Rates</a>
+				<a class="navlinks left" id="nomobile" href="bicycles.html">Bicycles</a>
+				<a class="navlinks left" id="nomobile" href="kayaks.html">Kayaks</a>
+				<a class="navlinks left" id="nomobile" href="paddleboards.html">Paddleboards</a>
+				<a class="navlinks right" href="contactus.html">Contact Us</a>
+				<a class="navlinks right" href="winter.html">Winter</a>
+				<a class="navlinks right" href="lodging.html">Lodging</a>
+				<a class="navlinks right" href="shop.html">Shop</a>
+	        </nav>
+	    </div>
 	</header>
-	<div class="section_body">
-	<div class="body_sections">
-	<h2 id="contact">Contact Us!</h2>
-	</div>
-	<div class="body_sections">
-	<section class="contact">
-		<form name="htmlform" method="post" action="html_form_send.php">
-		<table width="600px">
-		</tr>
-		<tr>
-		 <td valign="top">
-		  <label for="first_name">First Name *</label>
-		 </td>
-		 <td valign="top">
-		  <input  type="text" name="first_name" maxlength="50" size="30">
-		 </td>
-		</tr>
- 
-		<tr>
-		 <td valign="top">
-		  <label for="last_name">Last Name *</label>
-		 </td>
-		 <td valign="top">
-		  <input  type="text" name="last_name" maxlength="50" size="30">
-		 </td>
-		</tr>
 
-		<tr>
-		 <td valign="top">
-		  <label for="email">Email Address *</label>
-		 </td>
-		 <td valign="top">
-		  <input  type="text" name="email" maxlength="80" size="30">
-		 </td>
-		</tr>
+	<div class="wrapper">
+		<section class="section_body">
+			<div class="body_sections">
+				<h2 id="contact">Contact Us!</h2>
+			</div>
+			<div class="body_sections">
+				<div class="contact">
+					<form name="htmlform" method="post" action="html_form_send.php">
+						<table width="600px">
+							<!-- </tr> -->
+							<tr>
+							 <td valign="top">
+							  <label for="first_name">First Name *</label>
+							 </td>
+							 <td valign="top">
+							  <input  type="text" name="first_name" maxlength="50" size="30">
+							 </td>
+							</tr>
+	 
+							<tr>
+							 <td valign="top">
+							  <label for="last_name">Last Name *</label>
+							 </td>
+							 <td valign="top">
+							  <input  type="text" name="last_name" maxlength="50" size="30">
+							 </td>
+							</tr>
 
-		<tr>
-		 <td valign="top">
-		  <label for="telephone">Telephone Number</label>
-		 </td>
-		 <td valign="top">
-		  <input  type="text" name="telephone" maxlength="30" size="30">
-		 </td>
-		</tr>
+							<tr>
+							 <td valign="top">
+							  <label for="email">Email Address *</label>
+							 </td>
+							 <td valign="top">
+							  <input  type="text" name="email" maxlength="80" size="30">
+							 </td>
+							</tr>
 
-		<tr>
-		 <td valign="top">
-		  <label for="comments">Comments *</label>
-		 </td>
-		 <td valign="top">
-		  <textarea  name="comments" maxlength="1000" cols="30" rows="3"></textarea>
-		 </td>
- 
-		</tr>
-		<tr>
-		 <td colspan="2" style="text-align:center">
-		  <input type="submit" value="Submit">
-		 </td>
-		</tr>
-		</table>
-		</form>
-		<p>* Required field</p>
-	</section>
+							<tr>
+							 <td valign="top">
+							  <label for="telephone">Telephone Number</label>
+							 </td>
+							 <td valign="top">
+							  <input  type="text" name="telephone" maxlength="30" size="30">
+							 </td>
+							</tr>
+
+							<tr>
+							 <td valign="top">
+							  <label for="comments">Comments *</label>
+							 </td>
+							 <td valign="top">
+							  <textarea  name="comments" maxlength="1000" cols="30" rows="3"></textarea>
+							 </td>
+	 
+							</tr>
+							<tr>
+							 <td colspan="2" style="text-align:center">
+							  <input type="submit" value="Submit">
+							 </td>
+							</tr>
+						</table>
+					</form>
+					<p>* Required field</p>
+				</div>
+			</div>
+		</section>
 	</div>
-	</div>
+
 	<footer>
-		<div id="footer_upper">
-			<div id="footer_locations">
-				<p class="fwords">Now 3 locations on Tahoe's West Shore</p>
-				<p class="fwords">Homewood <a class="tele" href="tel:+15305259920">(530) 525-9920</a></p>
-				<p class="fwords">Sunnyside <a class="tele" href="tel:+15305839920">(530) 583-9920</a></p>
-				<p class="fwords">Sugar Pine Point</p>
-				<iframe id="instagram" src="https://snapwidget.com/embed/190713" class="snapwidget-widget" allowTransparency="true" frameborder="0" scrolling="no" style="border:none; overflow:hidden;"></iframe>
-			</div>
-			<div id="footer_map">
-				<iframe src="https://www.google.com/maps/d/embed?mid=1QzLyVR1t70EBLDyxnVcYNycPUl0"></iframe>
-			</div>
-		</div>
 		<div id="footer_social">
-			<a href="https://www.facebook.com/westshoresports/" class="sociallinks" target="_blank"><img src="images/fb_icongray.png"><img src="images/fb_iconblue.png"></a>
-			<a href="https://www.instagram.com/westshoresport/" class="sociallinks" target="_blank"><img src="images/ig_icongray.png"><img src="images/ig_iconblue.png"></a>
+			<div>
+				<a href="https://www.facebook.com/westshoresports/" class="sociallinks" target="_blank"><img src="images/fb_icongray.png"><img src="images/fb_iconblue.png"></a>
+				<a href="https://www.instagram.com/westshoresport/" class="sociallinks" target="_blank"><img src="images/ig_icongray.png"><img src="images/ig_iconblue.png"></a>
+			</div>
+			<iframe id="instagram" src="https://snapwidget.com/embed/190713" class="snapwidget-widget" allowTransparency="true" frameborder="0" scrolling="no" style="border:none; overflow:hidden;"></iframe>
+		</div>
+		<div id="footer_section">
+			<div id="footer_upper">
+				<div id="footer_locations" class="clearfix">
+					<p class="fwords">Now 3 locations on Tahoe's West Shore</p>
+					<p class="fwords"><span class="fontreg">Homewood</span> <a class="tele" href="tel:+15305259920">(530) 525-9920</a></p>
+					<p class="fwords"><span class="fontreg">Sunnyside</span> <a class="tele" href="tel:+15305839920">(530) 583-9920</a></p>
+					<p class="fwords"><span class="fontreg">Sugar Pine Point</span></p>
+				</div>
+				<div id="footer_map">
+					<iframe src="https://www.google.com/maps/d/embed?mid=1QzLyVR1t70EBLDyxnVcYNycPUl0"></iframe>
+				</div>
+			</div>
+			<div id="footer_copyright">
+				<p class="fwords">&copy; West Shore Sports 2016</p>
+			</div>
 		</div>
 	</footer>
 </body>

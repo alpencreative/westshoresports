@@ -6,99 +6,127 @@
 	<link rel="stylesheet" type="text/css" href="css/reset.css">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script src="js/classie.js"></script>
+	<script>
+	    function init() {
+	        window.addEventListener('scroll', function(e){
+	            var distanceY = window.pageYOffset || document.documentElement.scrollTop,
+	                shrinkOn = 100,
+	                header = document.querySelector("header");
+	                nav = document.querySelector("nav");
+	            if (distanceY > shrinkOn) {
+	                classie.add(header,"smaller")
+	                classie.add(nav,"smaller");
+	            } else {
+	                if (classie.has(header,"smaller")) {
+	                    classie.remove(header,"smaller");
+	                    classie.remove(nav,"smaller");
+	                }
+	            }
+	        });
+	    }
+	    window.onload = init();
+	</script>
 </head>
+
 <body>
 	<header>
-		<label for="toggle">
+		<label class="mobile_toggle" for="toggle">
 			<div class="line"></div>
 			<div class="line"></div>
 			<div class="line"></div>
 		</label>
-		<input type="checkbox" id="toggle">	
-		<!-- 	<div id="indexbanner"></div> -->
-			<div id="navbanner">
-			<nav>
-				<div class="nav">
-						<a class="navlinks left" href="rates.html">Rates</a>
-						<a class="navlinks left" id="nomobile" href="bicycles.html">Bicycles</a>					
-						<a class="navlinks left" id="nomobile" href="kayaks.html">Kayaks</a>
-						<a class="navlinks left" id="nomobile" href="paddleboards.html">Paddleboards</a>
-						<a class="navlinks right" href="contactus.html">Contact Us</a>
-						<a class="navlinks right" href="winter.html">Winter</a>
-						<a class="navlinks right" href="lodging.html">Lodging</a>
-						<a class="navlinks right" href="shop.html">Shop</a>
-				</div>	
-			</nav>
+		<input type="checkbox" id="toggle">
+	    
+	    <div class="container clearfix">
+	        <a href="index.html" id="centerlogo"><img src="images/wsslogo_small.png"></a>
+	        <nav class="clearfix">
+	        	<a class="navlinks left" href="index.html" id="nodesktop">Home</a>
+	            <a class="navlinks left" href="rates.html">Rates</a>
+				<a class="navlinks left" id="nomobile" href="bicycles.html">Bicycles</a>
+				<a class="navlinks left" id="nomobile" href="kayaks.html">Kayaks</a>
+				<a class="navlinks left" id="nomobile" href="paddleboards.html">Paddleboards</a>
+				<a class="navlinks right" href="contactus.html">Contact Us</a>
+				<a class="navlinks right" href="winter.html">Winter</a>
+				<a class="navlinks right" href="lodging.html">Lodging</a>
+				<a class="navlinks right" href="shop.html">Shop</a>
+	        </nav>
+	    </div>
+	</header>
+
+	<div class="wrapper">
+		<section class="section_body">
+			<div class="body_sections clearfix">
+				<div class="small_column_left">
+					<h1>Bike Rentals</h1>
+					<p>We have a selection of Men's and Women's bikes from cruisers, to mountain bikes to road bikes</p>
+					<p>Adult Bikes start at <span class="fontreg">$9/hr</span></p>
+					<p>Kid's Bikes start at <span class="fontreg">$6/hr</span></p>
+					<p>Half Day and Full Day rates available</p>
+					<a href="http://www.tahoecitypud.com/download/general/btmap.pdf" class="inline_link">View our Bike Trail Map</a>
+				</div>
+				<div class="big_column_right">
+					<img src="images/mtbwide2.jpg" class="section_pic">
+				</div>
 			</div>
-		</header>
-	<section class="section_body">
-		<div class="body_sections clearfix">
-			<div class="small_column_left">
-				<h1>Bike Rentals</h1>
-				<p>We have a selection of Men's and Women's bikes from cruisers, to mountain bikes to road bikes</p>
-				<p>Adult Bikes start at $9/hr</p>
-				<p>Kid's Bikes start at $6/hr</p>
-				<p>Half Day and Full Day rates available</p>
-				<a id="trailmp" href="http://www.tahoecitypud.com/download/general/btmap.pdf">View our Bike Trail Map</a>
+			<div class="body_sections clearfix">
+				<div class="bikebg">
+					<h3>Women's Bikes:</h3>
+					<img src="images/wmstownie.png">
+					<img src="images/electrawms.png">
+				</div>
+				<div class="bikebg">
+					<h3>Men's Bikes:</h3>
+					<img src="images/hybridbike.png">
+					<img src="images/mnstownie.png">
+					<img src="images/electramns.png">
+				</div>
+				<div class="bikebg">
+					<h3>Mountain/all-terrain Bikes:</h3>
+					<img src="images/mountainbike.png">
+					<img src="images/fatbike.png">
+				</div>
+				<div class="bikebg">
+					<h3>Youth/kids Bikes:</h3>
+					<img src="images/Bella-Aqua.png">
+					<img src="images/jrbike.png">
+					<img src="images/jrbike2.png">
+					<img src="images/jrbike3.png">
+				</div>
+				<div class="bikebg">
+					<h3>Built for two:</h3>
+					<img src="images/tandembike.png">
+					<img src="images/adamstrailabike.png"> <br>
+					<img src="images/Kid2Buggy.png">
+					<img src="images/kidstrailer.png">
+				</div>
 			</div>
-			<div class="big_column_right">
-				<img src="images/bikepic.png" id="bikepic">
-			</div>
-		</div>
-		<div class="body_sections clearfix">
-			<div>
-				<h3>Women's Bikes:</h3>
-				<img src="images/towniew-300x200.png">
-				<img src="images/simple7w-300x191.png">
-				<img src="images/cruiserw-300x190.png">
-			</div>
-			<div>
-				<h3>Men's Bikes:</h3>
-				<img src="images/escape-300x200.png">
-				<img src="images/simple7m-300x194.png">
-				<img src="images/towniem-300x200.png">
-			</div>
-			<div>
-				<h3>Mountain/all-terrain Bikes:</h3>
-				<img src="images/atx27.5-300x200.png">
-				<img src="images/revel2-300x200.png">
-				<img src="images/khs500-300x185.png">
-			</div>
-			<div>
-				<h3>Youth/kids Bikes:</h3>
-				<img src="images/cruiser24-300x190.png">
-				<img src="images/revel24-300x200.png">
-				<img src="images/trex-300x185.png"> <br>
-				<img src="images/bella-300x201.png">
-				<img src="images/moda-300x197.png">
-				<img src="images/xtc20-300x182.png">
-			</div>
-			<div>
-				<h3>Built for two:</h3>
-				<img src="images/tandemania-378x200.png">
-				<img src="images/trail_a_bike-300x150.png">
-				<img src="images/chariot1-221x200.png"> <br>
-				<img src="images/croozer2-300x217.png">
-				<img src="images/croozer_dog-300x200.png">
-			</div>
-		</div>
-	</section>
+		</section>
+	</div>
+	
 	<footer>
-		<div id="footer_upper">
-			<div id="footer_locations">
-				<p class="fwords">Now 3 locations on Tahoe's West Shore</p>
-				<p class="fwords">Homewood <a class="tele" href="tel:+15305259920">(530) 525-9920</a></p>
-				<p class="fwords">Sunnyside <a class="tele" href="tel:+15305839920">(530) 583-9920</a></p>
-				<p class="fwords">Sugar Pine Point</p>
-				<iframe id="instagram" src="https://snapwidget.com/embed/190713" class="snapwidget-widget" allowTransparency="true" frameborder="0" scrolling="no" style="border:none; overflow:hidden;"></iframe>
-			</div>
-			<div id="footer_map">
-				<iframe src="https://www.google.com/maps/d/embed?mid=1QzLyVR1t70EBLDyxnVcYNycPUl0"></iframe>
-			</div>
-		</div>
 		<div id="footer_social">
-			<a href="https://www.facebook.com/westshoresports/" class="sociallinks" target="_blank"><img src="images/fb_icongray.png"><img src="images/fb_iconblue.png"></a>
-			<a href="https://www.instagram.com/westshoresport/" class="sociallinks" target="_blank"><img src="images/ig_icongray.png"><img src="images/ig_iconblue.png"></a>
+			<div>
+				<a href="https://www.facebook.com/westshoresports/" class="sociallinks" target="_blank"><img src="images/fb_icongray.png"><img src="images/fb_iconblue.png"></a>
+				<a href="https://www.instagram.com/westshoresport/" class="sociallinks" target="_blank"><img src="images/ig_icongray.png"><img src="images/ig_iconblue.png"></a>
+			</div>
+			<iframe id="instagram" src="https://snapwidget.com/embed/190713" class="snapwidget-widget" allowTransparency="true" frameborder="0" scrolling="no" style="border:none; overflow:hidden;"></iframe>
+		</div>
+		<div id="footer_section">
+			<div id="footer_upper">
+				<div id="footer_locations" class="clearfix">
+					<p class="fwords">Now 3 locations on Tahoe's West Shore</p>
+					<p class="fwords"><span class="fontreg">Homewood</span> <a class="tele" href="tel:+15305259920">(530) 525-9920</a></p>
+					<p class="fwords"><span class="fontreg">Sunnyside</span> <a class="tele" href="tel:+15305839920">(530) 583-9920</a></p>
+					<p class="fwords"><span class="fontreg">Sugar Pine Point</span></p>
+				</div>
+				<div id="footer_map">
+					<iframe src="https://www.google.com/maps/d/embed?mid=1QzLyVR1t70EBLDyxnVcYNycPUl0"></iframe>
+				</div>
+			</div>
+			<div id="footer_copyright">
+				<p class="fwords">&copy; West Shore Sports 2016</p>
+			</div>
 		</div>
 	</footer>
 </body>

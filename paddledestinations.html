@@ -6,62 +6,103 @@
 	<link rel="stylesheet" type="text/css" href="css/reset.css">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script src="js/classie.js"></script>
+	<script>
+	    function init() {
+	        window.addEventListener('scroll', function(e){
+	            var distanceY = window.pageYOffset || document.documentElement.scrollTop,
+	                shrinkOn = 100,
+	                header = document.querySelector("header");
+	                nav = document.querySelector("nav");
+	            if (distanceY > shrinkOn) {
+	                classie.add(header,"smaller")
+	                classie.add(nav,"smaller");
+	            } else {
+	                if (classie.has(header,"smaller")) {
+	                    classie.remove(header,"smaller");
+	                    classie.remove(nav,"smaller");
+	                }
+	            }
+	        });
+	    }
+	    window.onload = init();
+	</script>
 </head>
+
 <body>
 	<header>
-		<label for="toggle">
+		<label class="mobile_toggle" for="toggle">
 			<div class="line"></div>
 			<div class="line"></div>
 			<div class="line"></div>
 		</label>
-		<input type="checkbox" id="toggle">	
-		<!-- 	<div id="indexbanner"></div> -->
-			<div id="navbanner">
-			<nav>
-				<div class="nav">
-						<a class="navlinks left" href="rates.html">Rates</a>
-						<a class="navlinks left" id="nomobile" href="bicycles.html">Bicycles</a>					
-						<a class="navlinks left" id="nomobile" href="kayaks.html">Kayaks</a>
-						<a class="navlinks left" id="nomobile" href="paddleboards.html">Paddleboards</a>
-						<a class="navlinks right" href="contactus.html">Contact Us</a>
-						<a class="navlinks right" href="winter.html">Winter</a>
-						<a class="navlinks right" href="lodging.html">Lodging</a>
-						<a class="navlinks right" href="shop.html">Shop</a>
-				</div>	
-			</nav>
+		<input type="checkbox" id="toggle">
+	    
+	    <div class="container clearfix">
+	        <a href="index.html" id="centerlogo"><img src="images/wsslogo_small.png"></a>
+	        <nav class="clearfix">
+	        	<a class="navlinks left" href="index.html" id="nodesktop">Home</a>
+	            <a class="navlinks left" href="rates.html">Rates</a>
+				<a class="navlinks left" id="nomobile" href="bicycles.html">Bicycles</a>
+				<a class="navlinks left" id="nomobile" href="kayaks.html">Kayaks</a>
+				<a class="navlinks left" id="nomobile" href="paddleboards.html">Paddleboards</a>
+				<a class="navlinks right" href="contactus.html">Contact Us</a>
+				<a class="navlinks right" href="winter.html">Winter</a>
+				<a class="navlinks right" href="lodging.html">Lodging</a>
+				<a class="navlinks right" href="shop.html">Shop</a>
+	        </nav>
+	    </div>
+	</header>
+
+	<div class="wrapper">
+		<section class="section_body">
+			<div class="body_sections">
+				<h1>Kayak and Paddleboarding Destinations</h1>
 			</div>
-		</header>
-		<section>
-			<h1>Kayak and Paddleboarding Destinations</h1>
-			<h3>Homewood</h3>
-			<p>Our Homewood location launces conveniently at Obexter's Boat Company south beach, directly across the street from our store. From here, we recommend paddling south toward's Chamber's Landing/Sugar Pine Point State Park, or paddle north towards Tahoe Pines/Hurricane Bay.</p>
-			<p>Paddling southbound will get you to Chamber's Landing, a popular summer destination for paddlers and boaters alike. Chamber's offers an excellent lakefront grill with lots of delicious options, and a great opportunity to relax before you head back on the water. Paddle just around the corner and find yourself at Sugar Pine Point State Park.  One of the West Shore's best kept secrets, Sugar Pine Point has a grassy lawns and sandy beaches perfect for hosting an afternoon picnic.</p>
-			<p>Heading northbound beyond Obexter's Marina is often very peaceful. Much of the shoreline is occupied by private homes, some of which are extravagent lakefront estates. Film fanatics will recognize an estate in Fleur du Lac's gated community as the Corleone headquarters in "The Godfather 2". Hurricane Bay has an excellent roadside beach with easy access so you can meet the rest of your crew on the beach and relax.</p>
-			<h3>Sunnyside</h3>
-			<p>Our Sunnyside location launches just north of Sunnyside Marina, adjacent to West Shore Market. From here, we recommend paddling south towards Ward Creek/Hurricane Bay, or paddle north towards Tahoe City.</p>
-			<p>Paddling southbound will initially take you past Sunnyside Lodge, a great afternoon lunch spot (with great fish tacos!). Heron, you'll be paddling past some extravegant lakefront homes within the Ward Creek drainage. Just beyond the mouth of Ward Creek, you'll get to Hurricane Bay. Despite the name, it hosts a fantasticaly huge and accessible beach that is great for a carside picnic. Don't forget to bring the dog!</p>
-			<p>Heading northbound will take you past more lakefront homes, some of which aren't even visible from the road. With virtually no amenities until you reach Tahoe City, this is the more serene option for a do-it-yourself paddling excursion. Once you hit Tahoe City, shopping, eating and drinking await you!</p>
-			<h3>Sugar Pine Point State Park</h3>
-			<p>Our Sugar Pine Point location is situated on the lake side of the park, just north of the Ehrmann Mansion and adjacent to the mouth of General Creek and the North Boathouse. From here, we recommend paddling south towards Meeks Bay/D.L. Bliss State Park, or paddle north towards Chamber's Landing/Homewood.</p>
-			<p>Paddling southbound from Sugar Pine Point is blissful. With little boat traffic, this section of the lake is about as peaceful and tranquil as it gets, with turquoise blue water and bloulder-strewn shorelines. A short paddle will land you at Meeks Bay Resort has an excellent sandy beach, and is often the site of an afternoon picnic or visit to the Wa-She-Shu Grille. Strong paddlers may find themselves continuing southward to D.L. Bliss State Park, one of Lake Tahoe's most popular summer destinations. With plenty of boulders and cliff jumps for the thrill-seeker, this may be the best beach location in Tahoe.</p>
-			<p>Heading northbound towards Chamber's Landing and Homewood offers a nice change from the Sugar Pine Point's beach. A short paddle will land you on the beautiful beach at Chamber's Landing, a well-known beach bar and grill. Don't forget to try a world-famous 'Chamber's Punch'!</p>
+			<div class="body_sections">
+				<h3>Homewood</h3>
+				<p>Our Homewood location launces conveniently at <a href="http://www.obexersboat.com/index.html" target="_blank" class="inline_link">Obexer's Boat Company</a> south beach, directly across the street from our store. From here, we recommend paddling south toward's Chamber's Landing/<a href="http://www.parks.ca.gov/?page_id=510" target="_blank" class="inline_link">Sugar Pine Point State Park</a>, or paddle north towards Tahoe Pines/Hurricane Bay.</p>
+				<p>Paddling southbound will get you to <a href="http://www.tahoepublicbeaches.com/chambers-landing/" target="_blank" class="inline_link">Chamber's Landing</a>, a popular summer destination for paddlers and boaters alike. Chamber's offers an excellent lakefront grill with lots of delicious options, and a great opportunity to relax before you head back on the water. Paddle just around the corner and find yourself at Sugar Pine Point State Park.  One of the West Shore's best kept secrets, Sugar Pine Point has a grassy lawns and sandy beaches perfect for hosting an afternoon picnic.</p>
+				<p>Heading northbound beyond Obexer's Marina is often very peaceful. Much of the shoreline is occupied by private homes, some of which are extravagant lakefront estates. Film fanatics will recognize an estate in Fleur du Lac's gated community as the Corleone headquarters in "The Godfather 2". Hurricane Bay has an excellent roadside beach with easy access so you can meet the rest of your crew on the beach and relax.</p>
+			</div>
+			<div class="body_sections">
+				<h3>Sunnyside</h3>
+				<p>Our Sunnyside location launches just north of <a href="http://www.sunnysidetahoe.com/" target="_blank" class="inline_link">Sunnyside Marina</a>, adjacent to <a href="http://www.westshoremarket.com/" target="_blank" class="inline_link">West Shore Market</a>. From here, we recommend paddling south towards Ward Creek/Hurricane Bay, or paddle north towards Tahoe City.</p>
+				<p>Paddling southbound will initially take you past Sunnyside Lodge, a great afternoon lunch spot (with great fish tacos!). From there on, you'll be paddling past extravegant lakefront homes within the Ward Creek drainage. Just beyond the mouth of Ward Creek, you'll get to Hurricane Bay. Despite the name, it hosts a fantasticaly huge and accessible beach that is great for a carside picnic. Don't forget to bring the dog!</p>
+				<p>Heading northbound will take you past more lakefront homes, some of which aren't even visible from the road. With virtually no amenities until you reach Tahoe City, this is the more serene option for a do-it-yourself paddling excursion. Once you hit Tahoe City, shopping, eating and drinking await you!</p>
+			</div>
+			<div class="body_sections">
+				<h3>Sugar Pine Point State Park</h3>
+				<p>Our Sugar Pine Point location is situated on the lake side of the park, just north of the Ehrmann Mansion and adjacent to the mouth of General Creek and the North Boathouse. From here, we recommend paddling south towards Meeks Bay/D.L. Bliss State Park, or paddle north towards Chamber's Landing/Homewood.</p>
+				<p>Paddling southbound from Sugar Pine Point is blissful. With little boat traffic, this section of the lake is about as peaceful and tranquil as it gets, with turquoise blue water and bloulder-strewn shorelines. A short paddle will land you at Meeks Bay Resort has an excellent sandy beach, and is often the site of an afternoon picnic or visit to the <a href="http://www.meeksbayresort.com/wa-she-shu-grill" target="_blank" class="inline_link">Wa-She-Shu Grille</a>. Strong paddlers may find themselves continuing southward to <a href="http://www.parks.ca.gov/?page_id=505" target="_blank" class="inline_link"> D.L. Bliss State Park</a>, one of Lake Tahoe's most popular summer destinations. With plenty of boulders and cliff jumps for the thrill-seeker, this may be the best beach location in Tahoe.</p>
+				<p>Heading northbound towards Chamber's Landing and Homewood offers a nice change from the Sugar Pine Point's beach. A short paddle will land you on the beautiful beach at Chamber's Landing, a well-known beach bar and grill. Don't forget to try a world-famous 'Chamber's Punch'!</p>
+			</div>
 		</section>
+	</div>
+
 	<footer>
-		<div id="footer_upper">
-			<div id="footer_locations">
-				<p class="fwords">Now 3 locations on Tahoe's West Shore</p>
-				<p class="fwords">Homewood <a class="tele" href="tel:+15305259920">(530) 525-9920</a></p>
-				<p class="fwords">Sunnyside <a class="tele" href="tel:+15305839920">(530) 583-9920</a></p>
-				<p class="fwords">Sugar Pine Point</p>
-				<iframe id="instagram" src="https://snapwidget.com/embed/190713" class="snapwidget-widget" allowTransparency="true" frameborder="0" scrolling="no" style="border:none; overflow:hidden;"></iframe>
-			</div>
-			<div id="footer_map">
-				<iframe src="https://www.google.com/maps/d/embed?mid=1QzLyVR1t70EBLDyxnVcYNycPUl0"></iframe>
-			</div>
-		</div>
 		<div id="footer_social">
-			<a href="https://www.facebook.com/westshoresports/" class="sociallinks" target="_blank"><img src="images/fb_icongray.png"><img src="images/fb_iconblue.png"></a>
-			<a href="https://www.instagram.com/westshoresport/" class="sociallinks" target="_blank"><img src="images/ig_icongray.png"><img src="images/ig_iconblue.png"></a>
+			<div>
+				<a href="https://www.facebook.com/westshoresports/" class="sociallinks" target="_blank"><img src="images/fb_icongray.png"><img src="images/fb_iconblue.png"></a>
+				<a href="https://www.instagram.com/westshoresport/" class="sociallinks" target="_blank"><img src="images/ig_icongray.png"><img src="images/ig_iconblue.png"></a>
+			</div>
+			<iframe id="instagram" src="https://snapwidget.com/embed/190713" class="snapwidget-widget" allowTransparency="true" frameborder="0" scrolling="no" style="border:none; overflow:hidden;"></iframe>
+		</div>
+		<div id="footer_section">
+			<div id="footer_upper">
+				<div id="footer_locations" class="clearfix">
+					<p class="fwords">Now 3 locations on Tahoe's West Shore</p>
+					<p class="fwords"><span class="fontreg">Homewood</span> <a class="tele" href="tel:+15305259920">(530) 525-9920</a></p>
+					<p class="fwords"><span class="fontreg">Sunnyside</span> <a class="tele" href="tel:+15305839920">(530) 583-9920</a></p>
+					<p class="fwords"><span class="fontreg">Sugar Pine Point</span></p>
+				</div>
+				<div id="footer_map">
+					<iframe src="https://www.google.com/maps/d/embed?mid=1QzLyVR1t70EBLDyxnVcYNycPUl0"></iframe>
+				</div>
+			</div>
+			<div id="footer_copyright">
+				<p class="fwords">&copy; West Shore Sports 2016</p>
+			</div>
 		</div>
 	</footer>
 </body>

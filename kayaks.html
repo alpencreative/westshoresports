@@ -6,56 +6,110 @@
 	<link rel="stylesheet" type="text/css" href="css/reset.css">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script src="js/classie.js"></script>
+	<script>
+	    function init() {
+	        window.addEventListener('scroll', function(e){
+	            var distanceY = window.pageYOffset || document.documentElement.scrollTop,
+	                shrinkOn = 100,
+	                header = document.querySelector("header");
+	                nav = document.querySelector("nav");
+	            if (distanceY > shrinkOn) {
+	                classie.add(header,"smaller")
+	                classie.add(nav,"smaller");
+	            } else {
+	                if (classie.has(header,"smaller")) {
+	                    classie.remove(header,"smaller");
+	                    classie.remove(nav,"smaller");
+	                }
+	            }
+	        });
+	    }
+	    window.onload = init();
+	</script>
 </head>
 <body>
 	<header>
-		<label for="toggle">
+		<label class="mobile_toggle" for="toggle">
 			<div class="line"></div>
 			<div class="line"></div>
 			<div class="line"></div>
 		</label>
-		<input type="checkbox" id="toggle">	
-		<!-- 	<div id="indexbanner"></div> -->
-			<div id="navbanner">
-			<nav>
-				<div class="nav">
-						<a class="navlinks left" href="rates.html">Rates</a>
-						<a class="navlinks left" id="nomobile" href="bicycles.html">Bicycles</a>					
-						<a class="navlinks left" id="nomobile" href="kayaks.html">Kayaks</a>
-						<a class="navlinks left" id="nomobile" href="paddleboards.html">Paddleboards</a>
-						<a class="navlinks right" href="contactus.html">Contact Us</a>
-						<a class="navlinks right" href="winter.html">Winter</a>
-						<a class="navlinks right" href="lodging.html">Lodging</a>
-						<a class="navlinks right" href="shop.html">Shop</a>
-				</div>	
-			</nav>
+		<input type="checkbox" id="toggle">
+	    
+	    <div class="container clearfix">
+	        <a href="index.html" id="centerlogo"><img src="images/wsslogo_small.png"></a>
+	        <nav class="clearfix">
+	        	<a class="navlinks left" href="index.html" id="nodesktop">Home</a>
+	            <a class="navlinks left" href="rates.html">Rates</a>
+				<a class="navlinks left" id="nomobile" href="bicycles.html">Bicycles</a>
+				<a class="navlinks left" id="nomobile" href="kayaks.html">Kayaks</a>
+				<a class="navlinks left" id="nomobile" href="paddleboards.html">Paddleboards</a>
+				<a class="navlinks right" href="contactus.html">Contact Us</a>
+				<a class="navlinks right" href="winter.html">Winter</a>
+				<a class="navlinks right" href="lodging.html">Lodging</a>
+				<a class="navlinks right" href="shop.html">Shop</a>
+	        </nav>
+	    </div>
+	</header>
+
+	<div class="wrapper">
+		<section class="section_body">
+			<div class="body_sections clearfix">
+				<div class="big_column_left">
+					<img src="images/kayakwide.jpg" class="section_pic">
+				</div>
+				<div class="small_column_right section_content">
+					<h1>Kayak Rentals</h1>
+					<p>from <span class="fontreg">$20/hr</span></p>
+				</div>
 			</div>
-		</header>
-		<section>
-			<h2>Kayak rentals from $20/hr</h2>
-			<h4>Single Kayaks:</h4>
-			<img src="images/tetra10.png">
-			<h4>Double/tandem Kayaks:</h4>
-			<img src="images/malibu2xl-450x183.png">
-			<p>Our Homewood store launches conveniently at Obexter's Boat Company south beach, directly across the street from our store. Our Sunnyside location launches just north of Sunnyside Marina, adjacent to West Shore Market. Our staff offers basic instruction and can help plan the best route for your kayaking adventure. Touring the West Shore by kayak is truly beautiful, relaxing and invigorating- try to plan on at least a half day of fun.</p>
-			<p>For paddling routes and destinations, <a href="paddledestinations.html">click here<a></p>
+			<div class="body_sections clearfix">
+				<div class="column_half">
+					<h4>Single Kayaks:</h4>
+					<img src="images/oceankayak-tetra-12-kayak_1.png" class="kayak_pic">
+					<h4>Double/tandem Kayaks:</h4>
+					<img src="images/malibu-two-xl-angler.png" class="kayak_pic">
+				</div>
+				<div class="column_half">
+					<img src="images/kayak2.jpg" class="section_pic pic_margin">
+				</div>
+			</div>
+			<div class="body_sections clearfix">
+				<div class="column_half">
+					<p>Our Homewood store launches conveniently at <a href="http://www.obexersboat.com/index.html" target="_blank" class="inline_link">Obexer's Boat Company</a> south beach, directly across the street from our store. Our Sunnyside location launches just north of <a href="http://www.sunnysidetahoe.com/" target="_blank" class="inline_link">Sunnyside Marina</a>, adjacent to <a href="http://www.westshoremarket.com/" target="_blank" class="inline_link">West Shore Market</a>. Our staff offers basic instruction and can help plan the best route for your kayaking adventure. Touring the West Shore by kayak is truly beautiful, relaxing and invigorating - try to plan on at least a half day of fun.</p>
+					<p>For paddling routes and destinations, <a href="paddledestinations.html" target="_self" class="inline_link">click here</a></p>
+				</div>
+				<div class="column_half pic_margin">
+					<img src="images/wsskayakwide.jpg" class="section_pic">
+				</div>
+			</div>
 		</section>
+	</div>
+	
 	<footer>
-		<div id="footer_upper">
-			<div id="footer_locations">
-				<p class="fwords">Now 3 locations on Tahoe's West Shore</p>
-				<p class="fwords">Homewood <a class="tele" href="tel:+15305259920">(530) 525-9920</a></p>
-				<p class="fwords">Sunnyside <a class="tele" href="tel:+15305839920">(530) 583-9920</a></p>
-				<p class="fwords">Sugar Pine Point</p>
-				<iframe id="instagram" src="https://snapwidget.com/embed/190713" class="snapwidget-widget" allowTransparency="true" frameborder="0" scrolling="no" style="border:none; overflow:hidden;"></iframe>
-			</div>
-			<div id="footer_map">
-				<iframe src="https://www.google.com/maps/d/embed?mid=1QzLyVR1t70EBLDyxnVcYNycPUl0"></iframe>
-			</div>
-		</div>
 		<div id="footer_social">
-			<a href="https://www.facebook.com/westshoresports/" class="sociallinks" target="_blank"><img src="images/fb_icongray.png"><img src="images/fb_iconblue.png"></a>
-			<a href="https://www.instagram.com/westshoresport/" class="sociallinks" target="_blank"><img src="images/ig_icongray.png"><img src="images/ig_iconblue.png"></a>
+			<div>
+				<a href="https://www.facebook.com/westshoresports/" class="sociallinks" target="_blank"><img src="images/fb_icongray.png"><img src="images/fb_iconblue.png"></a>
+				<a href="https://www.instagram.com/westshoresport/" class="sociallinks" target="_blank"><img src="images/ig_icongray.png"><img src="images/ig_iconblue.png"></a>
+			</div>
+			<iframe id="instagram" src="https://snapwidget.com/embed/190713" class="snapwidget-widget" allowTransparency="true" frameborder="0" scrolling="no" style="border:none; overflow:hidden;"></iframe>
+		</div>
+		<div id="footer_section">
+			<div id="footer_upper">
+				<div id="footer_locations" class="clearfix">
+					<p class="fwords">Now 3 locations on Tahoe's West Shore</p>
+					<p class="fwords"><span class="fontreg">Homewood</span> <a class="tele" href="tel:+15305259920">(530) 525-9920</a></p>
+					<p class="fwords"><span class="fontreg">Sunnyside</span> <a class="tele" href="tel:+15305839920">(530) 583-9920</a></p>
+					<p class="fwords"><span class="fontreg">Sugar Pine Point</span></p>
+				</div>
+				<div id="footer_map">
+					<iframe src="https://www.google.com/maps/d/embed?mid=1QzLyVR1t70EBLDyxnVcYNycPUl0"></iframe>
+				</div>
+			</div>
+			<div id="footer_copyright">
+				<p class="fwords">&copy; West Shore Sports 2016</p>
+			</div>
 		</div>
 	</footer>
 </body>

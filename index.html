@@ -29,65 +29,90 @@
 	    window.onload = init();
 	</script>
 </head>
-<body id="home">
-	<header class="clearfix">
-		<label for="toggle">
+<body>
+	<header>
+		<label class="mobile_toggle" for="toggle">
 			<div class="line"></div>
 			<div class="line"></div>
 			<div class="line"></div>
 		</label>
-		<input type="checkbox" id="toggle">	
-		<!-- 	<div id="indexbanner"></div> -->
-			<div id="navbanner" class="clearfix">
-			<nav class="clearfix">
-				<div class="nav clearfix">
-						<a class="navlinks left" href="rates.html">Rates</a>
-						<a class="navlinks left" id="nomobile" href="bicycles.html">Bicycles</a>
-						<a class="navlinks left" id="nomobile" href="kayaks.html">Kayaks</a>
-						<a class="navlinks left" id="nomobile" href="paddleboards.html">Paddleboards</a>
-						<a class="navlinks right" href="contactus.html">Contact Us</a>
-						<a class="navlinks right" href="winter.html">Winter</a>
-						<a class="navlinks right" href="lodging.html">Lodging</a>
-						<a class="navlinks right" href="shop.html">Shop</a>
-				</div>	
-			</nav>
+		<input type="checkbox" id="toggle">
+	    
+	    <div class="container clearfix">
+	        <a href="index.html" id="centerlogo"><img src="images/wsslogo_small.png"></a>
+	        <nav class="clearfix">
+	            <a class="navlinks left" href="rates.html">Rates</a>
+				<a class="navlinks left" id="nomobile" href="bicycles.html">Bicycles</a>
+				<a class="navlinks left" id="nomobile" href="kayaks.html">Kayaks</a>
+				<a class="navlinks left" id="nomobile" href="paddleboards.html">Paddleboards</a>
+				<a class="navlinks right" href="contactus.html">Contact Us</a>
+				<a class="navlinks right" href="winter.html">Winter</a>
+				<a class="navlinks right" href="lodging.html">Lodging</a>
+				<a class="navlinks right" href="shop.html">Shop</a>
+	        </nav>
+	    </div>
+	</header>
+
+	<div class="wrapper">
+		<section class="section_body clearfix">
+			<div class="body_sections section_content">
+				<h1 id="slogan">Now 3 Locations on Lake Tahoe's West Shore!</h1>
 			</div>
-		</header>
-		<section class="clearfix">
-			<h1 id="slogan">Now 3 Locations on Lake Tahoe's West Shore!</h1>
-			<div id="locations">
-				<div class="local">
-					<h2>Sunnyside</h2>
-					<p>1785 West Lake Boulevard</p>
-					<p>530.583.9920</p>
+			<div class="body_sections clearfix">
+				<div class="big_column_left">
+					<img src="images/shopwide.jpg" class="section_pic">
 				</div>
-				<div class="local">
+				<div class="small_column_right section_content">
 					<h2>Homewood</h2>
 					<p>5395 West Lake Boulevard</p>
 					<p>530.525.9920</p>
 				</div>
-				<div class="local">
+			</div>
+			<div class="body_sections clearfix">
+				<div class="big_column_right">
+					<img src="images/sunnysideshop.jpg" class="section_pic">
+				</div>
+				<div class="small_column_left section_content">
+					<h2>Sunnyside</h2>
+					<p>1785 West Lake Boulevard</p>
+					<p>530.583.9920</p>
+				</div>
+			</div>
+			<div class="body_sections clearfix">
+				<div class="big_column_right">
+					<img src="images/sugarpineshop.jpg" class="section_pic">
+				</div>
+				<div class="small_column_left section_content">
 					<h2>Sugar Pine State Park</h2>
-					<p>North side of Ehrman Mansion</p>
+					<p>North side of Ehrman Mansion</p>					
 				</div>
 			</div>
 		</section>
+	</div>
+
 	<footer>
-		<div id="footer_upper">
-			<div id="footer_locations">
-				<p class="fwords">Now 3 locations on Tahoe's West Shore</p>
-				<p class="fwords">Homewood <a class="tele" href="tel:+15305259920">(530) 525-9920</a></p>
-				<p class="fwords">Sunnyside <a class="tele" href="tel:+15305839920">(530) 583-9920</a></p>
-				<p class="fwords">Sugar Pine Point</p>
-				<iframe id="instagram" src="https://snapwidget.com/embed/190713" class="snapwidget-widget" allowTransparency="true" frameborder="0" scrolling="no" style="border:none; overflow:hidden;"></iframe>
-			</div>
-			<div id="footer_map">
-				<iframe src="https://www.google.com/maps/d/embed?mid=1QzLyVR1t70EBLDyxnVcYNycPUl0"></iframe>
-			</div>
-		</div>
 		<div id="footer_social">
-			<a href="https://www.facebook.com/westshoresports/" class="sociallinks" target="_blank"><img src="images/fb_icongray.png"><img src="images/fb_iconblue.png"></a>
-			<a href="https://www.instagram.com/westshoresport/" class="sociallinks" target="_blank"><img src="images/ig_icongray.png"><img src="images/ig_iconblue.png"></a>
+			<div>
+				<a href="https://www.facebook.com/westshoresports/" class="sociallinks" target="_blank"><img src="images/fb_icongray.png"><img src="images/fb_iconblue.png"></a>
+				<a href="https://www.instagram.com/westshoresport/" class="sociallinks" target="_blank"><img src="images/ig_icongray.png"><img src="images/ig_iconblue.png"></a>
+			</div>
+			<iframe id="instagram" src="https://snapwidget.com/embed/190713" class="snapwidget-widget" allowTransparency="true" frameborder="0" scrolling="no" style="border:none; overflow:hidden;"></iframe>
+		</div>
+		<div id="footer_section">
+			<div id="footer_upper">
+				<div id="footer_locations" class="clearfix">
+					<p class="fwords">Now 3 locations on Tahoe's West Shore</p>
+					<p class="fwords"><span class="fontreg">Homewood</span> <a class="tele" href="tel:+15305259920">(530) 525-9920</a></p>
+					<p class="fwords"><span class="fontreg">Sunnyside</span> <a class="tele" href="tel:+15305839920">(530) 583-9920</a></p>
+					<p class="fwords"><span class="fontreg">Sugar Pine Point</span></p>
+				</div>
+				<div id="footer_map">
+					<iframe src="https://www.google.com/maps/d/embed?mid=1QzLyVR1t70EBLDyxnVcYNycPUl0"></iframe>
+				</div>
+			</div>
+			<div id="footer_copyright">
+				<p class="fwords">&copy; West Shore Sports 2016</p>
+			</div>
 		</div>
 	</footer>
 </body>
