@@ -2,7 +2,7 @@
 @import url(https://fonts.googleapis.com/css?family=Shadows+Into+Light);
 @import url(https://fonts.googleapis.com/css?family=Coming+Soon);
 @import url(https://fonts.googleapis.com/css?family=Work+Sans:300,400);
-@import url(https://fonts.googleapis.com/css?family=Lato:300,400);
+@import url(https://fonts.googleapis.com/css?family=Lato:300,300italic,400);
 
 /*
 -*-*-Color Palette-*-*-
@@ -251,10 +251,12 @@ td {
 	margin: 2px 0;
 }
  
- .fontreg {
- 	font-weight: 400;
- }
-
+.fontreg {
+  	font-weight: 400;
+}
+.fontitalic {
+	font-style: italic;
+}
 .local {
 	display: inline-block;
 	padding: 5%;
@@ -314,6 +316,7 @@ td {
 	display: inline-block;
 	padding: .8%;
 	text-align: center;
+	vertical-align: top;
 	margin: 5px;
 	z-index: -999;
 }
@@ -376,17 +379,6 @@ td {
 	/*margin-top: 250px;*/
 	margin: auto;
 }
-
-/*#locations {
-	width: 70%;
-	margin: 0 auto;
-}*/
-
-/*#indexbanner {
-	background: url("../images/backgroundmonolake.jpg");
-	background-size: cover;
-    background-repeat: no-repeat;
-}*/
 
 #slogan {
 	font-size: 5em;
@@ -514,8 +506,9 @@ td {
 	text-align: center;
 	padding: 10px;
 }
-#footer_upper {
-
+#footer_upper iframe {
+	width: 60%;
+	height: 100%;
 }
 #footer_copyright {
 	margin: 15px;
@@ -530,7 +523,8 @@ td {
 	display: inline-block;
 	vertical-align: top;
 	width: 45%;
-	text-align: left;
+	height: 100%;
+	text-align: right;
 	margin: 30px;
 }
 
@@ -539,7 +533,7 @@ td {
 	width: 45%;
 	margin: 20px auto;
 	display: inline-block;
-	text-align: right;
+	text-align: left;
 	line-height: 2.5em;
 }
 
@@ -553,6 +547,15 @@ td {
 	padding: 5px;
 	width: 100%;
 	font-size: 1.5em;
+}
+.fwordssmall {
+	color: #d6d0d0;
+	padding: 0 5px 10px 5px;
+	width: 100%;
+	font-size: 1em;
+    margin-left: 0%;
+    margin: 0 auto;
+    width: auto;
 }
 
 .sociallinks {
@@ -669,11 +672,11 @@ a:hover img:first-child + img {
 		font-size: 6em;
 	}
 	.fwords {
-		width: 350px;
-		margin-left: 45%;
+		/*width: 350px;
+		margin-left: 45%;*/
 	}
-	.small_column_left {
-		margin-top: 30px;
+	.navlinks {
+		margin-top: 3.7%;
 	}
 	#navbanner {
 		height: 312px;
@@ -704,7 +707,7 @@ a:hover img:first-child + img {
 		height: 300px;
 	}	
 	.fwords {
-		margin-left: 41%;
+		/*margin-left: 41%;*/
 	}
 	.winterlocal h2 {
 		font-size: 3em;
@@ -718,12 +721,6 @@ a:hover img:first-child + img {
 	}
 }
 
-@media only screen and (min-width: 1400px) {
-	#footer_upper iframe {
-		width: 390px;
-	}
-}
-
 @media only screen and (max-width: 1400px) {
 	h1 {
 		font-size: 3.5em;
@@ -734,13 +731,13 @@ a:hover img:first-child + img {
 		line-height: 1.1em;
 	}
 	.navlinks {
-		font-size: .8em;
+		font-size: 1em;
 	}
 	.local{
 		padding: 4%;
 	}
 	.fwords {
-		margin-left: 36%;
+		/*margin-left: 36%;*/
 	}
 	.small_column_left {
 		margin-top: 1px;
@@ -753,18 +750,18 @@ a:hover img:first-child + img {
 @media only screen and (max-width: 1300px) {
 	.fwords {
 		font-size: 1em;
-		padding: 1px;
-		margin-left: 28%;
+		/*padding: 1px;
+		margin-left: 28%;*/
 	}
 	.winternav {
 		padding: 2%;
 		margin-top: 10.5%;
 	}
 	#footer_map {
-		margin:	40px;
+		/*margin:	40px;*/
 	}
 	#footer_upper {
-		height: 370px;
+		/*height: 370px;*/
 	}
 	#shop_words {
 		display: block;
@@ -779,19 +776,11 @@ a:hover img:first-child + img {
 }
 
 @media only screen and (max-width: 1200px) {
-	.fwords {
-		width: 250px;
-		margin-left: 46%;
+	.navlinks {
+		font-size: .8em;
 	}
 	#navbanner {
 		height: 250px;
-	}
-}
-
-@media only screen and (max-width: 1160px) {
-	.fwords {
-		width: 250px;
-		margin-left: 44%;
 	}
 }
 
@@ -805,8 +794,8 @@ a:hover img:first-child + img {
 	#lodg {
 		padding: 0;
 	}
-	.fwords {
-		margin-left: 40%;
+	.navlinks {
+		margin-top: 3.5%;
 	}
 	#navbanner {
 		height: 180px;
@@ -824,7 +813,10 @@ a:hover img:first-child + img {
 		width: 100%;
 	}
 	.fwords {
-		margin-left: 32%;
+		/*margin-left: 32%;*/
+	}
+	.navlinks {
+		margin: 3.3% 1.2%;
 	}
 	#navbanner {
 		height: 200px;
@@ -844,8 +836,8 @@ a:hover img:first-child + img {
 		background-image: none;
 	}
 	header{
-		padding: 0;
-		background-image: url("../images/WSSLogobkgd_3.png");
+		padding: 5px;
+		background-image: url("../images/mobilenavbanner.png");
 		background-color: #FFF;
 		position: initial;
 	}
@@ -859,6 +851,7 @@ a:hover img:first-child + img {
 		float:none;
 		display:block;
 		font-size: 1.2em;
+		margin: 15px;
 	}
 	#centerlogo {
 		display: none;
@@ -925,6 +918,9 @@ a:hover img:first-child + img {
 	    width: auto;
 	    text-align: center;
 	}
+	.fwordssmall {
+		text-align: center;
+	}
 	#toggle:checked + .container nav {	
 		display: block;
 	}
@@ -959,7 +955,7 @@ a:hover img:first-child + img {
 		display: block;
 	}
 	#footer_map {
-		width: 100%;
+		width: 60%;
 		margin: 10px auto;
 		text-align: center;
 	}
@@ -1044,6 +1040,9 @@ a:hover img:first-child + img {
 	#slogan {
 		padding: 0;
 	}
+	#footer_map {
+		width: 80%;
+	}
 }
 
 @media only screen and (max-width: 550px) {
@@ -1096,6 +1095,15 @@ a:hover img:first-child + img {
 @media only screen and (max-width: 450px) {
 	textarea {
 		width: 170px;
+	}
+	.fwords {
+		font-size: .8em;
+	}
+	.fwordssmall {
+		font-size: .8em;
+	}
+	.navlinks {
+		font-size: 1em;
 	}
 	#slogan {
 		font-size: 2em;
