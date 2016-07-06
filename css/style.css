@@ -66,6 +66,11 @@ header.smaller {
     top: -11%; 
 }
 
+
+
+
+
+
 h1 {
 	font-family: 'Shadows Into Light', cursive;
 	font-size: 7em;
@@ -167,7 +172,6 @@ textarea {
 
 tr {
 	width: 80%;
-	font-size: 25px;
 }
 
 td {
@@ -203,10 +207,6 @@ td {
 	font-size: 1.7em;
 	vertical-align: middle;
 	z-index: 999;
-}
-
-#acwords {
-	font-size: 1em;
 }
 
 #centerlogo {
@@ -284,7 +284,7 @@ td {
 	font-weight: bolder;
 	text-decoration: none;
 	text-transform: uppercase;
-	margin: 4.3% 1.8%;
+	margin: 4% 1.8%;
 	font-size: 1.2em;
 
 	-webkit-transition: 0.2s;
@@ -357,7 +357,6 @@ td {
 
 .tablehead {
 	font-weight: 700;
-	margin: 5px;
 }
 
 .contact {
@@ -414,10 +413,6 @@ td {
 	background-color: #eee;
 	padding: 1%;
 	margin: 1%;
-	/*font-size: 10px;*/
-}
-.indexfont {
-	font-size: 10px;
 }
 .small_column_left {
 	display: inline-block;
@@ -432,7 +427,7 @@ td {
 	width: 33%;
 }
 .section_content {
-	padding: 2% 2%;
+	padding: 5% 3%;
 }
 #rentalheader_bikes {
 	background-image: url(../images/rentalbg_bikes.jpg);
@@ -469,8 +464,17 @@ td {
 	width: 50%;
 }
 
-.locs {
-	font-size: 1.5em;
+.vimeo_holder {
+	position: relative;
+	padding-bottom: 56.25%;
+	height: 0;
+	overflow: hidden;
+}
+.vimeo_holder iframe {
+	position: absolute;
+	top: 0; left: 0;
+	width: 100%;
+	height: 100%;
 }
 
 .inline_link {
@@ -508,10 +512,6 @@ td {
 
 #shop_stuff {
 	background-color: #D6D0D0;
-}
-
-#aclogo {
-	width: 30px;
 }
 
 #footer_section {
@@ -613,8 +613,8 @@ a:hover img:first-child + img {
 }
 
 .tele {
-	color: #929090;
-	font-size: 1.7em;
+	color: #d6d0d0;
+	font-size: 1em;
     padding: 0;	
 
     -webkit-transition: all linear 200ms;
@@ -629,9 +629,6 @@ a:hover img:first-child + img {
 @media only screen and (max-width: 2100px) {
 	.local {
 		width: 600px;
-	}
-	.indexfont {
-		font-size: 8px;
 	}
 }
 
@@ -708,14 +705,10 @@ a:hover img:first-child + img {
 		font-size: 5em;
 	}
 	h2 {
-		font-size: 2em;
-		margin: 18px;
+		font-size: 2.5em;
 	}
 	h4 {
 		font-size: 1.4em;
-	}
-	tr {
-		font-size: 15px;
 	}
 	.local {
 		width: 450px;
@@ -738,12 +731,6 @@ a:hover img:first-child + img {
 	}*/
 	#shsmal {
 		font-size: 3em;
-	}
-	.indexfont {
-		font-size: 7px;
-	}
-	.section_content {
-		padding: 2% 1%;
 	}
 }
 
@@ -838,9 +825,6 @@ a:hover img:first-child + img {
 	p {
 		width: 100%;
 	}
-	tr {
-		font-size: 12px;
-	}
 	.fwords {
 		/*margin-left: 32%;*/
 	}
@@ -918,9 +902,6 @@ a:hover img:first-child + img {
 		float: none;
 		width: 100%;
 	}
-	.indexfont {
-		font-size: 10px;
-	}
 	.section_content {
 		padding: 10px;
 	}
@@ -997,9 +978,6 @@ a:hover img:first-child + img {
 	#footer_copyright {
 
 	}
-	#suppic {
-		width: 70%;
-	}
 	.wrapper {
 		clear: both;
 		margin-top: 0;
@@ -1031,10 +1009,6 @@ a:hover img:first-child + img {
 	.winterlocal {
 		display: block;
 		padding: 0;
-	}
-	.paddlepic {
-		width: 70%;
-		margin: 0 auto;
 	}
 	#navbanner {
 		height: 130px;
@@ -1072,9 +1046,6 @@ a:hover img:first-child + img {
 	}
 	.body_sections {
 		margin-bottom: 10px;
-	}
-	.bikebg img {
-		width: 70%;
 	}
 	#navbanner {
 		height: 90px;
@@ -1155,9 +1126,6 @@ a:hover img:first-child + img {
 @media only screen and (max-width: 400px) {
 	textarea {
 		width: 150px;
-	}
-	h2 {
-		margin: 10px;
 	}
 	h5 {
 		font-size: 2em;
